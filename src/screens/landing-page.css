@@ -1,0 +1,43 @@
+/* Main container */
+.landing-page-container {
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 97%;
+}
+
+/* L.I.F.E. styling */
+.life {
+  font-size: 6rem; /* Adjust size as needed */
+  font-family: 'Press Start 2P', monospace; /* Use the CRT-style font */
+  align-items: center;
+  margin-bottom: 10%; /* Space between L.I.F.E. and PRESS START */
+  margin-left: 1rem;
+}
+
+/* Flashing "PRESS START" */
+.press-start {
+  font-size: 1.5rem;
+  font-family: 'Press Start 2P', monospace; /* Use the CRT-style font */
+  display: flex;
+  align-items: center;
+}
+
+.greater-than {
+  margin-right: 10px;
+  animation: flash 1s infinite; /* Flash effect */
+}
+
+/* Animation for flashing text */
+@keyframes flash {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.1%,
+  100% {
+    opacity: 0;
+  }
+}

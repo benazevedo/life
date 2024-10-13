@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+/* Resetting margin and padding for full-page layout */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-border-wrapper {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 20px; /* Adjusts the space between the content and the border */
+  box-sizing: border-box;
+  /* Stretching the image as a border */
+  border: 50px solid transparent;
+  border-image-source: url('./images/crt-border.png');
+  border-image-slice: 30 fill; /* fill keyword ensures the border behaves correctly */
+  border-image-width: 50px;
+  border-image-repeat: stretch;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-content {
+  width: 90%;
+  height: 94%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+  box-sizing: border-box;
+  padding: 20px; /* Add padding inside the content */
+  z-index: -1;
 }
