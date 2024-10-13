@@ -13,8 +13,8 @@
   font-size: 6rem; /* Adjust size as needed */
   font-family: 'Press Start 2P', monospace; /* Use the CRT-style font */
   align-items: center;
-  margin-bottom: 10%; /* Space between L.I.F.E. and PRESS START */
-  margin-left: 1rem;
+  margin-bottom: 7rem; /* Space between L.I.F.E. and PRESS START */
+  margin-left: 1.5rem;
 }
 
 /* Flashing "PRESS START" */
