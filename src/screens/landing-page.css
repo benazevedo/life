@@ -1,7 +1,45 @@
+.app-border-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adjusts the space between the content and the border */
+  box-sizing: border-box;
+  /* Stretching the image as a border */
+  border: 50px solid transparent;
+  border-image-source: url('../images/crt-border.png');
+  border-image-slice: 30 fill; /* fill keyword ensures the border behaves correctly */
+  border-image-width: 50px;
+  border-image-repeat: stretch;
+  z-index: -1;
+}
+
+.app-border-spacer {
+  width: 90%;
+  height: 94%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+  box-sizing: border-box;
+  z-index: -2;
+}
+
+.app-content {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 20px; /* Add padding inside the content */
+  z-index: 1000;
+}
+
 /* Main container */
 .landing-page-container {
   display: flex;
-  flex-direction: column; /* Stack the content vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -10,27 +48,35 @@
 
 /* L.I.F.E. styling */
 .life {
-  font-size: 6rem; /* Adjust size as needed */
-  font-family: 'Press Start 2P', monospace; /* Use the CRT-style font */
+  font-size: 6rem;
+  font-family: 'Press Start 2P', monospace;
   align-items: center;
-  margin-bottom: 7rem; /* Space between L.I.F.E. and PRESS START */
+  margin-bottom: 7rem;
   margin-left: 1.5rem;
 }
 
 /* Flashing "PRESS START" */
 .press-start {
   font-size: 1.5rem;
-  font-family: 'Press Start 2P', monospace; /* Use the CRT-style font */
+  font-family: 'Press Start 2P', monospace;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+/* Add animation when clicked */
+.press-start.clicked {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+/* Flashing effect */
 .greater-than {
   margin-right: 10px;
-  animation: flash 1s infinite; /* Flash effect */
+  animation: flash 1s infinite;
 }
 
-/* Animation for flashing text */
 @keyframes flash {
   0%,
   50% {
