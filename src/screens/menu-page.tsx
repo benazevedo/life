@@ -1,12 +1,26 @@
-import React from 'react';
-import './menu-page.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Hook to navigate to other pages
 import ScreenWrapper from '../components/screen-wrapper';
+import './menu-page.css';
 
 function MenuPage() {
+  const [clicked, setClicked] = useState(false); // State to manage the click event
+  const navigate = useNavigate(); // React Router hook for navigation
+
+  // Function to handle "PRESS START" click
+  const handlePressStart = () => {
+    setClicked(true); // Start the animation
+
+    // Delay for the effect duration, then navigate to the menu page
+    setTimeout(() => {
+      navigate('/stars');
+    }, 1000); // Adjust time to match the animation duration
+  };
   return (
     <ScreenWrapper>
       <img
-        className="top-left-image"
+        className={`top-left-image ${clicked ? 'clicked' : ''}`}
+        onClick={handlePressStart}
         src="https://dwvo2npct47gg.cloudfront.net/gifs/awge-home.gif"
         alt="Home button spinning globe"
       />

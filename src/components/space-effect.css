@@ -1,0 +1,30 @@
+/* Container for the space effect as a background */
+.space-container {
+  position: fixed; /* Or 'absolute', depending on your layout */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-color: black;
+  overflow: hidden;
+  z-index: -1; /* Ensure this stays in the background behind other content */
+}
+
+/* Each star */
+.star {
+  position: absolute;
+  background-color: white;
+  width: 2px; /* Default size of the stars */
+  height: 2px;
+  animation: move-up infinite linear;
+}
+
+/* Animation for moving the stars upwards */
+@keyframes move-up {
+  from {
+    transform: translateY(100vh); /* Start from below the container */
+  }
+  to {
+    transform: translateY(-100vh); /* Move up beyond the top of the container */
+  }
+}
