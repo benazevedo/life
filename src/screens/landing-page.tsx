@@ -19,8 +19,8 @@ function LandingPage() {
 
   return (
     <ScreenWrapper>
-      <div className="landing-page-container">
-        <div className="life">L.I.F.E.</div>
+      <div className="life-page-container">
+        <div className="life">L.i.F.E.</div>
         <div
           className={`press-start ${clicked ? 'clicked' : ''}`} // Add "clicked" class if clicked
           onClick={handlePressStart}
@@ -30,24 +30,6 @@ function LandingPage() {
       </div>
     </ScreenWrapper>
   );
-
-  // return (
-  //   <div className="app-border-wrapper">
-  //     <div className="app-border-spacer">
-  //       <div className="app-content">
-  //         <div className="landing-page-container">
-  //           <div className="life">L.I.F.E.</div>
-  //           <div
-  //             className={`press-start ${clicked ? 'clicked' : ''}`} // Add "clicked" class if clicked
-  //             onClick={handlePressStart}
-  //           >
-  //             <span className="greater-than">&gt;</span> PRESS START
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default LandingPage;

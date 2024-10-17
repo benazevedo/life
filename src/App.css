@@ -1,6 +1,7 @@
 :root {
   --screencolor: #ffffff;
-  --primary-black: #000000;
+  --textcolor: #000000;
+  --black: #000000;
   --primary-white: #ffffff;
   --primary: #dc143c;
   --primary-purple: #675dff;
@@ -9,36 +10,6 @@
   --primary-green-neon: #39ff14;
 }
 
-/* Resetting margin and padding for full-page layout */
-html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.app-border-wrapper {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px; /* Adjusts the space between the content and the border */
-  box-sizing: border-box;
-  /* Stretching the image as a border */
-  border: 50px solid transparent;
-  border-image-source: url('./images/crt-border.png');
-  border-image-slice: 30 fill; /* fill keyword ensures the border behaves correctly */
-  border-image-width: 50px;
-  border-image-repeat: stretch;
-}
-
-.app-content {
-  width: 90%;
-  height: 94%;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
-  box-sizing: border-box;
-  padding: 20px; /* Add padding inside the content */
-  z-index: -1;
+  font-family: 'Press Start 2P', monospace;
 }

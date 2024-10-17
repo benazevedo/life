@@ -24,6 +24,10 @@
 .app-content {
   width: 73.5vw;
   height: 73.5vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1.4vh;
   box-sizing: border-box;
   padding: 20px; /* Add padding inside the content */

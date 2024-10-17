@@ -1,5 +1,5 @@
 /* Main container */
-.landing-page-container {
+.life-page-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +15,7 @@
   align-items: center;
   margin-bottom: 7rem;
   margin-left: 1.5rem;
+  color: var(--textcolor);
 }
 
 /* Flashing "PRESS START" */
@@ -25,6 +26,7 @@
   align-items: center;
   cursor: pointer;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  color: var(--textcolor);
 }
 
 /* Add animation when clicked */
