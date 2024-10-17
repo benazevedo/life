@@ -1,0 +1,32 @@
+.app-screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--screencolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.app-computer-border {
+  height: 100vh;
+  width: 100vw;
+  border-image-source: url('../images/crt-border.png');
+  border-image-slice: 30 fill; /* fill keyword ensures the border behaves correctly */
+  border-image-width: 50px;
+  border-image-repeat: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.app-content {
+  width: 73.5vw;
+  height: 73.5vh;
+  margin-bottom: 1.4vh;
+  box-sizing: border-box;
+  padding: 20px; /* Add padding inside the content */
+  z-index: 1000;
+  background-color: var(--screencolor);
+}

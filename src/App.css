@@ -1,3 +1,14 @@
+:root {
+  --screencolor: #ffffff;
+  --primary-black: #000000;
+  --primary-white: #ffffff;
+  --primary: #dc143c;
+  --primary-purple: #675dff;
+  --primary-blue-electric: #0077ff;
+  --primary-gray-charcoal: #333333;
+  --primary-green-neon: #39ff14;
+}
+
 /* Resetting margin and padding for full-page layout */
 html,
 body {

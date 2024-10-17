@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Hook to navigate to other pages
+import ScreenWrapper from '../components/screen-wrapper';
 import './landing-page.css';
 
 function LandingPage() {
@@ -17,22 +18,36 @@ function LandingPage() {
   };
 
   return (
-    <div className="app-border-wrapper">
-      <div className="app-border-spacer">
-        <div className="app-content">
-          <div className="landing-page-container">
-            <div className="life">L.I.F.E.</div>
-            <div
-              className={`press-start ${clicked ? 'clicked' : ''}`} // Add "clicked" class if clicked
-              onClick={handlePressStart}
-            >
-              <span className="greater-than">&gt;</span> PRESS START
-            </div>
-          </div>
+    <ScreenWrapper>
+      <div className="landing-page-container">
+        <div className="life">L.I.F.E.</div>
+        <div
+          className={`press-start ${clicked ? 'clicked' : ''}`} // Add "clicked" class if clicked
+          onClick={handlePressStart}
+        >
+          <span className="greater-than">&gt;</span> PRESS START
         </div>
       </div>
-    </div>
+    </ScreenWrapper>
   );
+
+  // return (
+  //   <div className="app-border-wrapper">
+  //     <div className="app-border-spacer">
+  //       <div className="app-content">
+  //         <div className="landing-page-container">
+  //           <div className="life">L.I.F.E.</div>
+  //           <div
+  //             className={`press-start ${clicked ? 'clicked' : ''}`} // Add "clicked" class if clicked
+  //             onClick={handlePressStart}
+  //           >
+  //             <span className="greater-than">&gt;</span> PRESS START
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default LandingPage;
