@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Hook to navigate to other pages
 import ScreenWrapper from '../components/screen-wrapper';
 import './shop-page.css';
+import Card from '../components/card';
+import data from '../data/shopdata.json';
 
 function ShopPage() {
   const [clicked, setClicked] = useState(false); // State to manage the click event
@@ -24,11 +26,12 @@ function ShopPage() {
         src="https://dwvo2npct47gg.cloudfront.net/gifs/awge-home.gif"
         alt="Home button spinning globe"
       />
-      <div
-        className="menu-page-container"
-        style={{ color: 'red', fontSize: '5rem' }}
-      >
-        SHOP
+      <div className="content-container">
+        <Card
+          price={data[0].price}
+          image={data[0].images[0]}
+          title={data[0].title}
+        />
       </div>
     </ScreenWrapper>
   );
