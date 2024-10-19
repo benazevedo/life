@@ -23,9 +23,16 @@
   width: 80%;
   height: 80%;
   color: white;
+  font-weight: 400;
+}
+
+.content-container h2 {
+  font-weight: 400;
+  text-align: center;
 }
 
 .content-container h4 {
-  line-height: 1.5; /* Adjust to increase vertical spacing */
-  text-align: center; /* Optional: center the text */
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
 }
