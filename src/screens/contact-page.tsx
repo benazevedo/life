@@ -24,11 +24,9 @@ function ContactPage() {
         src="https://dwvo2npct47gg.cloudfront.net/gifs/awge-home.gif"
         alt="Home button spinning globe"
       />
-      <div
-        className="menu-page-container"
-        style={{ color: 'red', fontSize: '5rem' }}
-      >
-        CONTACT
+      <div className="menu-page-container">
+        <h1 style={{ color: 'red', fontSize: '5rem' }}>CONTACT</h1>
+        <h6 style={{ color: 'red', fontSize: '1rem' }}>(COMING SOON)</h6>
       </div>
     </ScreenWrapper>
   );
