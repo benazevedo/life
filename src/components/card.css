@@ -12,16 +12,17 @@
 .card-title {
   color: white;
   font-size: 16px; /* Same size for all text */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .card-image {
   width: 180px;
   height: 180px;
-  object-fit: cover; /* Ensure the image fits within the dimensions */
+  object-fit: cover;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition effect for the image */
 }
 
 .card-button {

@@ -15,5 +15,27 @@
     "description": "BEAUTiFUL MODEL iS 62 INCHES TALL. NO SHE DOES NOT COME WiTH PiECE",
     "sizes": ["I", "II", "III", "X", "XX"],
     "category": "PiECES"
+  },
+  {
+    "title": "S",
+    "images": [
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/14121853/3748655136.jpg",
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/14121853/3748293472.jpg",
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/14121853/4554202113.jpg"
+    ],
+    "price": 200,
+    "description": "ALL PiECES ARE DiFFERENT",
+    "sizes": [],
+    "category": "PiECES"
+  },
+  {
+    "title": "3 PACK",
+    "images": [
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/14121853/1233144326.jpg"
+    ],
+    "price": 5,
+    "description": "DON'T WASTE YOUR LiFE!!!",
+    "sizes": [],
+    "category": "STiCKERS"
   }
 ]

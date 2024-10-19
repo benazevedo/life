@@ -29,7 +29,7 @@ function ShopPage() {
       <div className="content-container">
         <Card
           price={data[0].price}
-          image={data[0].images[0]}
+          images={data[0].images}
           title={data[0].title}
         />
       </div>
