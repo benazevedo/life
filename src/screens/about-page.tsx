@@ -24,11 +24,19 @@ function AboutPage() {
         src="https://dwvo2npct47gg.cloudfront.net/gifs/awge-home.gif"
         alt="Home button spinning globe"
       />
-      <div
-        className="menu-page-container"
-        style={{ color: 'red', fontSize: '5rem' }}
-      >
-        ABOUT
+      <div className="content-container">
+        <h2>WHAT iS L.i.F.E. ?</h2>
+        <h4>
+          i want you to put on these pieces and feel like you can do anything
+          you put your mind too. i know that just wearing a shirt won't give you
+          power...or will it? maybe everything you've been learning is a lie.
+          whats the downside of chasing your dreams? why are my pieces so
+          special? who am i? does any of this even matter? i don't know much but
+          I do know everyone has it inside of them to be whatever makes them
+          happy. i am you and you are me. we are the universe. NEVER LET ANYONE
+          TELL YOU WHAT YOUR L.i.F.E. iS AND iF SOMEONE ASKS... LiFE iS FOR
+          EVERYONE!!!
+        </h4>
       </div>
     </ScreenWrapper>
   );
