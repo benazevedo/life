@@ -24,11 +24,9 @@ function ForumPage() {
         src="https://dwvo2npct47gg.cloudfront.net/gifs/awge-home.gif"
         alt="Home button spinning globe"
       />
-      <div
-        className="menu-page-container"
-        style={{ color: 'red', fontSize: '5rem' }}
-      >
-        FORUM
+      <div className="content-container">
+        <h1 style={{ color: 'red', fontSize: '5rem' }}>FORUM</h1>
+        <h6 style={{ color: 'red', fontSize: '1rem' }}>lifeis4everyone</h6>
       </div>
     </ScreenWrapper>
   );

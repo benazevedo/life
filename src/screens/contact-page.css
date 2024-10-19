@@ -16,7 +16,7 @@
 }
 
 /* Main container */
-.menu-page-container {
+.content-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
