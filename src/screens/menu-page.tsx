@@ -8,72 +8,85 @@ function MenuPage() {
   const navigate = useNavigate(); // React Router hook for navigation
 
   // Function to handle "PRESS START" click
-  const handlePressStart = () => {
+  const handleGlobe = () => {
     setClicked(true); // Start the animation
 
     // Delay for the effect duration, then navigate to the menu page
     setTimeout(() => {
-      navigate('/stars');
+      navigate('/');
     }, 1000); // Adjust time to match the animation duration
   };
+
+  const handleNavigation = (destination: string) => {
+    navigate(`/${destination}`);
+  };
+
   return (
     <ScreenWrapper>
       <img
         className={`top-left-image ${clicked ? 'clicked' : ''}`}
-        onClick={handlePressStart}
+        onClick={() => handleGlobe()}
         src="https://dwvo2npct47gg.cloudfront.net/gifs/awge-home.gif"
         alt="Home button spinning globe"
       />
       <div className="menu-page-container">
-        <div className="menu-title">{'L.I.F.E.'}</div>
+        <div className="menu-title">{'L.i.F.E.'}</div>
         <div className="menu-options">
           <div className="menu-item">
             <img
               className="menu-item-icon"
               src="https://dwvo2npct47gg.cloudfront.net/gifs/awgeForum.gif"
               alt="Forum Icon"
+              onClick={() => handleNavigation('forum')}
             />
-            <h3 className="menu-item-text forum-text">FORUM</h3>
-          </div>
-          <div className="menu-item">
-            <img
-              className="menu-item-icon"
-              src="https://dwvo2npct47gg.cloudfront.net/gifs/awgeDVD.gif"
-              alt="AWGE DVD Icon"
-            />
-            <h3 className="menu-item-text">DVD</h3>
+            <h3
+              className="menu-item-text forum-text"
+              onClick={() => handleNavigation('forum')}
+            >
+              FORUM
+            </h3>
           </div>
           <div className="menu-item">
             <img
               className="menu-item-icon"
               src="https://dwvo2npct47gg.cloudfront.net/gifs/hats_2.gif"
               alt="Shop Icon"
+              onClick={() => handleNavigation('shop')}
             />
-            <h3 className="menu-item-text shop-text">SHOP</h3>
-          </div>
-          <div className="menu-item">
-            <img
-              className="menu-item-icon"
-              src="https://dwvo2npct47gg.cloudfront.net/gifs/DBD-COVER1-reverse.gif"
-              alt="A$AP ROCKY - DONT BE DUMB"
-            />
-            <h3 className="menu-item-text">A$AP</h3>
+            <h3
+              className="menu-item-text shop-text"
+              onClick={() => handleNavigation('shop')}
+            >
+              SHOP
+            </h3>
           </div>
           <div className="menu-item">
             <img
               className="menu-item-icon"
               src="https://dwvo2npct47gg.cloudfront.net/gifs/question-block-red.gif"
               alt="About Icon"
+              onClick={() => handleNavigation('about')}
             />
-            <h3 className="menu-item-text about-text">ABOUT</h3>
+            <h3
+              className="menu-item-text about-text"
+              onClick={() => handleNavigation('about')}
+            >
+              ABOUT
+            </h3>
           </div>
           <div className="menu-item">
             <img
               className="menu-item-icon"
               src="https://dwvo2npct47gg.cloudfront.net/gifs/pager.gif"
               alt="Contact Icon"
+              onClick={() => handleNavigation('contact')}
             />
-            <h3 className="menu-item-text shop-text">CONTACT</h3>
+            <h3
+              className="menu-item-text contact-text"
+              onClick={() => handleNavigation('contact')}
+            >
+              CONTACT
+            </h3>
           </div>
         </div>
       </div>
