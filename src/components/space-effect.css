@@ -14,15 +14,25 @@
 .star {
   position: absolute;
   background-color: white;
-  width: 2px; /* Default size of the stars */
-  height: 2px;
-  animation: move-up infinite linear;
+  animation: move-up 0s linear forwards, infinite-move-up 5s linear infinite; /* Two animations */
 }
 
-/* Animation for moving the stars upwards */
+/* First animation for random starting position */
 @keyframes move-up {
   from {
-    transform: translateY(100vh); /* Start from below the container */
+    transform: translateY(
+      var(--start-y)
+    ); /* Start from a random vertical position */
+  }
+  to {
+    transform: translateY(-100vh); /* Move up beyond the top of the container */
+  }
+}
+
+/* Second animation for subsequent movement from bottom to top */
+@keyframes infinite-move-up {
+  from {
+    transform: translateY(100vh); /* Always start from bottom of the screen */
   }
   to {
     transform: translateY(-100vh); /* Move up beyond the top of the container */

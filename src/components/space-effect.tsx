@@ -5,7 +5,8 @@ import './space-effect.css'; // Import the CSS we defined earlier
 interface Star {
   id: number;
   size: number;
-  left: number;
+  horizontal: number;
+  vertical: number;
   speed: number;
   delay: number;
 }
@@ -20,16 +21,16 @@ const SpaceEffect: React.FC = () => {
 
     for (let i = 0; i < numStars; i++) {
       const size = Math.random() * 3 + 1; // Size between 1px and 5px
-      const left = Math.random() * 100; // Random left position (percentage)
+      const horizontal = Math.random() * 100; // Random left position (percentage)
+      const vertical = Math.random() * 100; // Random initial vertical position
       const delay = Math.random() * 5; // Random delay to stagger the starts
-
-      // Larger stars will have shorter duration (faster), smaller stars longer (slower)
-      const speed = 35 - size * 5; // Example: Bigger stars move faster, smaller move slower
+      const speed = 35 - size * 5; // Larger stars move faster, smaller move slower
 
       starsArray.push({
         id: i,
         size,
-        left,
+        horizontal,
+        vertical,
         speed,
         delay,
       });
@@ -45,7 +46,8 @@ const SpaceEffect: React.FC = () => {
           key={star.id}
           className="star"
           style={{
-            left: `${star.left}%`,
+            left: `${star.horizontal}%`,
+            top: `${star.vertical}%`,
             width: `${star.size}px`,
             height: `${star.size}px`,
             animationDuration: `${star.speed}s`,
