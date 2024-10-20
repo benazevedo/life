@@ -1,0 +1,152 @@
+* {
+  color: white;
+}
+
+.top-left-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Add animation when clicked */
+.top-left-image.clicked {
+  transform: scale(1.2);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.8s ease 0.3s;
+}
+
+/* Main container to hold the image and product details side by side */
+.product-details-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 40px; /* Space between image and details */
+  justify-content: center;
+}
+
+/* Style for the left image section */
+.product-image-left {
+  flex: 1;
+}
+
+.product-main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Product details on the right */
+.product-details-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  /* border: 1px solid red; */
+}
+
+.product-details-right h1,
+.product-details-right p {
+  margin-bottom: 10px;
+}
+
+.info-section {
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-bottom: 20px;
+}
+
+.info-section-label {
+  color: greenyellow;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+}
+
+.title-label {
+  font-size: 2rem;
+}
+
+.price-label {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.description-label {
+  font-size: 0.75rem;
+}
+
+.sizes-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+  height: 50px;
+  border: 1px solid white;
+}
+
+.quantity-selector button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  margin: 0 10px;
+}
+
+.quantity-selector span {
+  font-size: 16px;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Buttons for add to cart and buy now */
+.action-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.add-to-cart-btn,
+.buy-now-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-btn {
+  margin-top: 10px;
+  background-color: white;
+  color: black;
+}
+
+.add-to-cart-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.buy-now-btn:hover {
+  background-color: gray;
+  border: 1px solid gray;
+  color: black;
+}

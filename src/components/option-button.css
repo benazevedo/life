@@ -1,0 +1,8 @@
+.option-button {
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: white;
+  height: 15px;
+  border-radius: 20px;
+  margin-right: 15px;
+}
