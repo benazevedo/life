@@ -67,15 +67,17 @@ const ProductDetailsPage = () => {
             <div className="price-label">${product.price}.00 USD</div>
             <div className="description-label">{product.description}</div>
           </div>
-          <div className="info-section">
-            <div className="info-section-label">SIZES</div>
-            <div className="sizes-list">
-              {product.sizes.length > 0 &&
-                product.sizes.map((size: string) => (
+          {product.sizes.length > 0 && (
+            <div className="info-section">
+              <div className="info-section-label">SIZES</div>
+              <div className="sizes-list">
+                {product.sizes.map((size: string) => (
                   <OptionButton label={size} />
                 ))}
+              </div>
             </div>
-          </div>
+          )}
+
           <div className="info-section">
             <div className="info-section-label">QUANTITY</div>
             <div className="quantity-selector">
