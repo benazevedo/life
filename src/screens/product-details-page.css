@@ -110,12 +110,11 @@
   font-size: 16px;
   min-width: 40px;
   text-align: center;
+  cursor: default;
 }
 
-/* Buttons for add to cart and buy now */
-.action-buttons {
-  display: flex;
-  gap: 20px;
+.quantity-button {
+  cursor: pointer;
 }
 
 .add-to-cart-btn,

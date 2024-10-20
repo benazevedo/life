@@ -81,9 +81,19 @@ const ProductDetailsPage = () => {
           <div className="info-section">
             <div className="info-section-label">QUANTITY</div>
             <div className="quantity-selector">
-              <div onClick={() => handleQuantityChange(-1)}>-</div>
+              <div
+                className="quantity-button"
+                onClick={() => handleQuantityChange(-1)}
+              >
+                -
+              </div>
               <span>{quantity}</span>
-              <div onClick={() => handleQuantityChange(1)}>+</div>
+              <div
+                className="quantity-button"
+                onClick={() => handleQuantityChange(1)}
+              >
+                +
+              </div>
             </div>
           </div>
           <div className="info-section">
