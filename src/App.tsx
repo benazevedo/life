@@ -7,6 +7,7 @@ import ForumPage from './screens/forum-page';
 import ShopPage from './screens/shop-page';
 import AboutPage from './screens/about-page';
 import ContactPage from './screens/contact-page';
+import ProductDetailsPage from './screens/product-details-page';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/:title" element={<ProductDetailsPage />} />
       </Routes>
     </Router>
   );

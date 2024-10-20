@@ -6,18 +6,16 @@ import Card from '../components/card';
 import data from '../data/shopdata.json';
 
 function ShopPage() {
-  const [clicked, setClicked] = useState(false); // State to manage the click event
-  const navigate = useNavigate(); // React Router hook for navigation
+  const [clicked, setClicked] = useState(false);
+  const navigate = useNavigate();
 
-  // Function to handle "PRESS START" click
   const handleGlobe = () => {
-    setClicked(true); // Start the animation
-
-    // Delay for the effect duration, then navigate to the menu page
+    setClicked(true);
     setTimeout(() => {
       navigate(-1);
-    }, 1000); // Adjust time to match the animation duration
+    }, 1000);
   };
+
   return (
     <ScreenWrapper>
       <img
@@ -26,12 +24,15 @@ function ShopPage() {
         src="https://dwvo2npct47gg.cloudfront.net/gifs/awge-home.gif"
         alt="Home button spinning globe"
       />
-      <div className="content-container">
-        <Card
-          price={data[0].price}
-          images={data[0].images}
-          title={data[0].title}
-        />
+      <div className="shop-content-container">
+        {data.map((item) => (
+          <Card
+            key={item.id}
+            price={item.price}
+            images={item.images}
+            title={item.title}
+          />
+        ))}
       </div>
     </ScreenWrapper>
   );

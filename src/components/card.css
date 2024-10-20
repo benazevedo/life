@@ -29,7 +29,6 @@
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: transparent;
   border: 2px solid white;
   color: white;
   font-size: 16px;
@@ -41,6 +40,24 @@
   justify-content: center;
 }
 
+/* Hover effect */
 .card-button:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+  background-color: white; /* Change background to white */
+  color: black; /* Make text transparent */
+}
+
+.card-title,
+.card-price,
+.card-image,
+.card-button {
+  cursor: pointer; /* Ensure a pointer cursor on all clickable elements */
+}
+
+/* CSS flipping effect for images */
+.flip-image {
+  transition: transform;
+}
+
+.flip-image:hover {
+  transform: rotateY(180deg); /* Flip the image horizontally */
 }

@@ -2,25 +2,36 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100px; /* Adjust the size as necessary */
-  z-index: 10; /* Make sure it's above other elements */
+  height: 100px;
+  z-index: 10;
   cursor: pointer;
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth scaling and fading */
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 /* Add animation when clicked */
 .top-left-image.clicked {
   transform: scale(1.2);
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.8s ease 0.3s; /* Delay opacity */
+  transition: transform 0.3s ease, opacity 0.8s ease 0.3s;
 }
 
-/* Main container */
-.content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Main container with grid layout and dynamic columns */
+.shop-content-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Adjust based on available width */
+  grid-gap: 20px; /* Gap between grid items */
+  justify-items: center; /* Center items horizontally */
   width: 80%;
-  height: 80%;
+  height: 100%; /* Set a fixed height to enable vertical scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px; /* Add padding inside the container */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.shop-content-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
