@@ -6,4 +6,16 @@
   border-radius: 20px;
   margin-right: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: gray;
+}
+
+.option-button.selected {
+  border-color: greenyellow; /* Highlight selected option */
+  background-color: greenyellow;
+  color: black;
 }

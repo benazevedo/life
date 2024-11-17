@@ -6,25 +6,26 @@ import data from '../data/shopdata.json';
 import OptionButton from '../components/option-button';
 
 const ProductDetailsPage = () => {
-  const { title } = useParams<{ title: string }>(); // Get the dynamic title from the route
-  const [product, setProduct] = useState<any | null>(null); // State to hold the product details
-  const [quantity, setQuantity] = useState(1); // State for quantity
+  const { title } = useParams<{ title: string }>();
+  const [product, setProduct] = useState<any | null>(null);
+  const [mainImage, setMainImage] = useState<string | null>(null);
+  const [quantity, setQuantity] = useState(1);
+  const [option, setOption] = useState<string | null>(null); // New state for selected option
   const [clicked, setClicked] = useState(false);
   const navigate = useNavigate();
 
-  // Decode the title by replacing hyphens with spaces
   const decodeTitle = (encodedTitle: string) => {
     return encodedTitle.replace(/-/g, ' ');
   };
 
-  // Find the product based on the decoded title
   useEffect(() => {
-    const decodedTitle = decodeTitle(title || ''); // Decode the title
+    const decodedTitle = decodeTitle(title || '');
     const foundProduct = data.find((item) => item.title === decodedTitle);
-    setProduct(foundProduct); // Set the found product in state
+    setProduct(foundProduct);
+    setMainImage(foundProduct?.images[0] || null);
+    setOption(foundProduct?.sizes[0] || null);
   }, [title]);
 
-  // Handle globe click animation and navigation
   const handleGlobe = () => {
     setClicked(true);
     setTimeout(() => {
@@ -32,13 +33,20 @@ const ProductDetailsPage = () => {
     }, 1000);
   };
 
-  // Handle quantity increase and decrease
+  const handleThumbnailClick = (image: string) => {
+    setMainImage(image);
+  };
+
   const handleQuantityChange = (amount: number) => {
-    setQuantity((prevQuantity) => Math.max(1, prevQuantity + amount)); // Ensure quantity never goes below 1
+    setQuantity((prevQuantity) => Math.max(1, prevQuantity + amount));
+  };
+
+  const handleOptionClick = (selectedOption: string) => {
+    setOption(selectedOption); // Update the selected option
   };
 
   if (!product) {
-    return <div>Loading...</div>; // Handle case when product is not found yet
+    return <div>Loading...</div>;
   }
 
   return (
@@ -52,10 +60,23 @@ const ProductDetailsPage = () => {
       <div className="product-details-container">
         <div className="product-image-left">
           <img
-            src={product.images[0]}
+            src={mainImage || ''}
             alt={product.title}
             className="product-main-image"
           />
+          <div className="product-thumbnails">
+            {product.images.map((image: string, index: number) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Thumbnail ${index + 1}`}
+                className={`thumbnail ${
+                  mainImage === image ? 'selected-thumbnail' : ''
+                }`}
+                onClick={() => handleThumbnailClick(image)}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="product-details-right">
@@ -72,7 +93,12 @@ const ProductDetailsPage = () => {
               <div className="info-section-label">SIZES</div>
               <div className="sizes-list">
                 {product.sizes.map((size: string) => (
-                  <OptionButton label={size} />
+                  <OptionButton
+                    key={size}
+                    label={size}
+                    selected={option === size}
+                    onClick={() => handleOptionClick(size)}
+                  />
                 ))}
               </div>
             </div>
