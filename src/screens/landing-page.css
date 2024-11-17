@@ -39,6 +39,7 @@
 .greater-than {
   margin-right: 10px;
   animation: flash 1s infinite;
+  color: var(--textcolor);
 }
 
 @keyframes flash {

@@ -68,7 +68,7 @@ const ProductDetailsPage = () => {
             <div className="description-label">{product.description}</div>
           </div>
           {product.sizes.length > 0 && (
-            <div className="info-section">
+            <div className="info-section-sizes">
               <div className="info-section-label">SIZES</div>
               <div className="sizes-list">
                 {product.sizes.map((size: string) => (
