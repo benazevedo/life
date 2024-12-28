@@ -1,3 +1,4 @@
+/* Ensure full screen for the wrapper */
 .app-screen {
   height: 100vh;
   width: 100vw;
@@ -8,29 +9,43 @@
   z-index: -1;
 }
 
+/* Outer border styling */
 .app-computer-border {
-  height: 100vh;
-  width: 100vw;
-  border-image-source: url('../data/crt-border.png');
-  border-image-slice: 30 fill; /* fill keyword ensures the border behaves correctly */
-  border-image-width: 50px;
-  border-image-repeat: stretch;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 0;
+  box-sizing: border-box;
 }
 
+/* Inner content centering */
 .app-content {
-  width: 73.5vw;
-  height: 73.5vh;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.4vh;
+  width: 73.5vw;
+  height: 73.5vh;
+  margin: auto;
+  padding: 0px;
   box-sizing: border-box;
-  padding: 20px; /* Add padding inside the content */
+  position: relative;
   z-index: 1000;
-  /* background-color: var(--screencolor); */
+}
+
+@media (min-width: 600px) {
+  .app-computer-border {
+    height: 100%;
+    width: 100%;
+    border-image-source: url('../data/crt-border.png');
+    border-image-slice: 30 fill;
+    border-image-width: 50px;
+    border-image-repeat: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    box-sizing: border-box;
+  }
 }
