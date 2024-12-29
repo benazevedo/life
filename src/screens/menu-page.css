@@ -21,8 +21,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 80%;
 }
 
 .menu-title {
@@ -90,10 +88,8 @@
   color: black;
 }
 
-/* Media query for mobile: 3 rows and 2 columns */
-@media (max-width: 768px) {
-  .menu-options {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+@media (max-width: 750px) {
+  .top-left-image {
+    display: none;
   }
 }

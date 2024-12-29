@@ -24,9 +24,9 @@ function AboutPage() {
         src="https://dwvo2npct47gg.cloudfront.net/gifs/awge-home.gif"
         alt="Home button spinning globe"
       />
-      <div className="content-container">
-        <h2>WHAT iS L.i.F.E. ?</h2>
-        <h4>
+      <div className="about-content-container">
+        <span className="title">WHAT iS L.i.F.E. ?</span>
+        <span className="answer">
           i want you to put on these pieces and feel like you can do anything
           you put your mind too. i know that just wearing a shirt won't give you
           power...or will it? maybe everything you've been learning is a lie.
@@ -36,7 +36,7 @@ function AboutPage() {
           happy. i am you and you are me. we are the universe. NEVER LET ANYONE
           TELL YOU WHAT YOUR L.i.F.E. iS AND iF SOMEONE ASKS... LiFE iS FOR
           EVERYONE!!!
-        </h4>
+        </span>
       </div>
     </ScreenWrapper>
   );

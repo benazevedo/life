@@ -1,38 +1,29 @@
-.top-left-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100px; /* Adjust the size as necessary */
-  z-index: 10; /* Make sure it's above other elements */
-  cursor: pointer;
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth scaling and fading */
-}
-
-/* Add animation when clicked */
-.top-left-image.clicked {
-  transform: scale(1.2);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.8s ease 0.3s; /* Delay opacity */
-}
-
-.content-container {
+.about-content-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 80%;
+  flex: 1;
   color: white;
   font-weight: 400;
 }
 
-.content-container h2 {
+.about-content-container .title {
   font-weight: 400;
   text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }
 
-.content-container h4 {
+.about-content-container .answer {
   line-height: 1.5;
   font-weight: 400;
   text-align: center;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .about-content-container .answer {
+    font-size: 0.75rem;
+  }
 }
