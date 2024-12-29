@@ -20,7 +20,16 @@ function LandingPage() {
   return (
     <ScreenWrapper>
       <div className="life-page-container">
-        <div className="life">L.i.F.E.</div>
+        <div className="life">
+          <span>L</span>
+          <span>.</span>
+          <span>i</span>
+          <span>.</span>
+          <span>F</span>
+          <span>.</span>
+          <span>E</span>
+          <span>.</span>
+        </div>
         <div
           className={`press-start ${clicked ? 'clicked' : ''}`} // Add "clicked" class if clicked
           onClick={handlePressStart}

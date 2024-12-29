@@ -9,12 +9,18 @@
 
 /* L.I.F.E. styling */
 .life {
-  font-size: 6rem;
   font-family: 'Press Start 2P', monospace;
   align-items: center;
   margin-bottom: 7rem;
-  margin-left: 1.5rem;
+}
+
+.life span {
+  font-size: 6rem;
   color: var(--textcolor);
+}
+
+.life span:last-child {
+  letter-spacing: -0.4em; /* Reset for the last character */
 }
 
 /* Flashing "PRESS START" */
