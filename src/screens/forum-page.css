@@ -1,20 +1,3 @@
-.top-left-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100px; /* Adjust the size as necessary */
-  z-index: 10; /* Make sure it's above other elements */
-  cursor: pointer;
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth scaling and fading */
-}
-
-/* Add animation when clicked */
-.top-left-image.clicked {
-  transform: scale(1.2);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.8s ease 0.3s; /* Delay opacity */
-}
-
 /* Main container */
 .content-container {
   display: flex;

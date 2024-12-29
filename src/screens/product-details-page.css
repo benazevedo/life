@@ -2,23 +2,6 @@
   color: white;
 }
 
-.top-left-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100px;
-  z-index: 10;
-  cursor: pointer;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-/* Add animation when clicked */
-.top-left-image.clicked {
-  transform: scale(1.2);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.8s ease 0.3s;
-}
-
 /* Main container to hold the image and product details side by side */
 .product-details-container {
   display: flex;
